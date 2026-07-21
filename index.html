@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Studio System&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@font-face {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'FT Aktual';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>src: url('https://fonts.gstatic.com/s/courierPrime/v13/u-4n0qyriQwlOrhSvowK_l5OcU0.woff2') format('woff2');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>* { margin: 0; padding: 0; box-sizing: border-box; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: 'FT Aktual', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: white; color: black; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>input[type="checkbox"] { accent-color: black; cursor: pointer; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header { border-bottom: 1px solid black; padding: 30px; margin-bottom: 30px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header h1 { font-size: 12px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header p { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-top: 5px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container { max-width: 950px; margin: 0 auto; padding: 0 20px 40px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tabs { display: flex; border-bottom: 1px solid black; margin-bottom: 40px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tab-btn { padding: 12px 20px; border: none; background: white; cursor: pointer; font-size: 11px; font-weight: bold; border-bottom: 2px solid white; font-family: 'FT Aktual', sans-serif; text-transform: uppercase; color: black; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tab-btn.active { border-bottom: 2px solid black; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tab-btn:hover { background: #f0f0f0; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.content { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.content.active { display: block; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.form-section { margin-bottom: 30px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.form-section h2 { font-size: 10px; font-weight: bold; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid black; text-transform: uppercase; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>th, td { border: 1px solid black; padding: 10px; text-align: left; font-size: 10px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>th { background: white; font-weight: bold; text-transform: uppercase; width: 25%; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>label { display: block; font-size: 10px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>input, textarea { padding: 8px; border: 1px solid black; background: white; color: black; font-size: 10px; font-family: 'FT Aktual', sans-serif; width: 100%; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button { padding: 10px 16px; border: 1px solid black; background: white; color: black; cursor: pointer; font-weight: bold; font-family: 'FT Aktual', sans-serif; text-transform: uppercase; font-size: 10px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button:hover { background: #f0f0f0; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button.primary { background: black; color: white; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button.primary:hover { background: #333; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.buttons { display: flex; gap: 10px; margin-top: 30px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.message { padding: 12px; border: 1px solid black; margin-bottom: 20px; font-size: 10px; display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.success { color: black; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.error { color: red; border-color: red; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card { border: 1px solid black; padding: 0; cursor: pointer; display: flex; flex-direction: column; overflow: hidden; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card:hover { background: #f5f5f5; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card img { width: 100%; height: 150px; object-fit: cover; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card-content { flex: 1; overflow: hidden; display: flex; flex-direction: column; padding: 12px; padding-bottom: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card h3 { font-size: 10px; font-weight: bold; margin-bottom: 8px; text-transform: uppercase; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card p { font-size: 9px; margin-bottom: 6px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card-text { overflow: hidden; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card-text p:last-child { display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card button { margin: 0; padding: 8px; border: none; border-top: 1px solid black; background: white; color: black; cursor: pointer; font-weight: bold; font-family: 'FT Aktual', sans-serif; text-transform: uppercase; font-size: 10px; margin-top: auto; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.badges { display: flex; flex-wrap: wrap; gap: 4px; margin: 8px 0; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.badge { border: 1px solid black; padding: 2px 6px; font-size: 8px; font-weight: bold; text-transform: uppercase; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.empty { padding: 40px; text-align: center; font-size: 11px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; overflow-y: auto; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.modal.active { display: block; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.modal-content { background: white; margin: 20px auto; max-width: 800px; border: 2px solid black; padding: 40px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.modal-close { font-size: 20px; cursor: pointer; border: 1px solid black; padding: 0 8px; background: white; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.modal-close:hover { background: #f0f0f0; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.dims-row { display:</p>
+</body>
+</html>
