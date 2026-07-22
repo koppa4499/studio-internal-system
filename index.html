@@ -243,15 +243,12 @@
         </div>
     </div>
 
-    <!-- Project Detail Modal -->
+<!-- Project Detail Modal -->
     <div id="projectDetailModal" class="modal">
         <div class="modal-content">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; gap: 10px;">
+            <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 20px; gap: 8px;">
                 <button onclick="openEditProjectModal(window.currentProject)" style="padding: 10px 20px; background: black; color: white; border: 1px solid black; font-size: 10px; cursor: pointer; font-weight: bold; font-family: 'FT Aktual', sans-serif; text-transform: uppercase;">✎ Edit</button>
-                <div style="margin-left: auto; display: flex; gap: 8px;">
-                    <button onclick="deleteProject(window.currentProject.id)" style="padding: 10px 20px; background: white; color: red; border: 1px solid red; font-size: 10px; cursor: pointer; font-weight: bold; font-family: 'FT Aktual', sans-serif; text-transform: uppercase;">Delete</button>
-                    <span class="modal-close" onclick="closeProjectDetail()">&times;</span>
-                </div>
+                <span class="modal-close" onclick="closeProjectDetail()">&times;</span>
             </div>
             <div id="projectDetailContent"></div>
         </div>
@@ -728,6 +725,7 @@
                             <p>${p.description || ''}</p>
                             ${assembliesHtml}
                         </div>
+                        <button onclick="event.stopPropagation(); deleteProject(${p.id})">Delete</button>
                     </div>
                 `;
             }).join('');
