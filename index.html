@@ -518,7 +518,7 @@
                                 <div class="card-text">
                                     <p><strong>Function:</strong> ${p.function || ''}</p>
                                     <p><strong>Part:</strong> ${p.part || '-'}</p>
-                                    ${(p.length || p.width || p.height) ? `<p><strong>Dim:</strong> ${p.length || '-'} x ${p.width || '-'} x ${p.height || '-'} cm</p>` : ''}
+                                    ${(p.length || p.width || p.height) ? `<p><strong>Dim:</strong> ${p.length || '-'} x ${p.width || '-'} x ${p.height || '-'} mm</p>` : ''}
                                     ${p.description ? `<p style="font-size: 9px; margin-top: 8px;">${p.description}</p>` : ''}
                                     ${compsHtml}
                                 </div>
@@ -567,7 +567,7 @@
                         <table style="width: 100%; border-collapse: collapse; margin-bottom: 10px;">
                             <tr><td style="border: 1px solid black; padding: 6px; font-weight: bold; width: 25%;">FUNCTION</td><td style="border: 1px solid black; padding: 6px;">${part.function || ''}</td></tr>
                             <tr><td style="border: 1px solid black; padding: 6px; font-weight: bold;">PART</td><td style="border: 1px solid black; padding: 6px;">${part.part || '-'}</td></tr>
-                            ${(part.length || part.width || part.height) ? `<tr><td style="border: 1px solid black; padding: 6px; font-weight: bold;">DIMENSIONS (L x W x H)</td><td style="border: 1px solid black; padding: 6px;">${part.length || '-'} x ${part.width || '-'} x ${part.height || '-'} cm</td></tr>` : ''}
+                            ${(part.length || part.width || part.height) ? `<tr><td style="border: 1px solid black; padding: 6px; font-weight: bold;">DIMENSIONS (L x W x H)</td><td style="border: 1px solid black; padding: 6px;">${part.length || '-'} x ${part.width || '-'} x ${part.height || '-'} mm</td></tr>` : ''}
                         </table>
                         ${part.image ? `<div style="border: 1px solid black; margin-bottom: 10px; height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #f5f5f5;"><img src="${part.image}" style="max-width: 100%; max-height: 300px; object-fit: cover;"></div>` : ''}
                         ${componentsHtml}
