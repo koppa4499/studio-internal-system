@@ -454,6 +454,7 @@
                 document.getElementById('partForm').reset();
                 document.getElementById('imagePreview').innerHTML = '';
                 document.getElementById('componentsList').innerHTML = '';
+                allPartsCache = [];
                 setTimeout(() => { document.getElementById('successMsg').style.display = 'none'; }, 5000);
             }).catch(function(err) {
                 document.getElementById('successMsg').style.display = 'none';
