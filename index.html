@@ -380,19 +380,19 @@
         }
 
         async function addProjectAssemblyRow() {
-           if (!allPartsCache.length) await loadAllPartsCache();
-            const rowId = 'proj_asm_' + Date.now() + Math.floor(Math.random() * 1000);
-            const options = allPartsCache.map(p => `<option value="${p.id}">${p.name}${p.part ? ' — Part ' + p.part : ''}</option>`).join('');
-            const div = document.createElement('div');
-            div.id = rowId;
-            div.className = 'comp-row';
-            div.innerHTML = `
-                <select style="flex: 2;"><option value="">Select assembly...</option>${options}</select>
-                <input type="number" placeholder="Qty" value="1" min="1" style="flex: 1;">
-                <button type="button" onclick="document.getElementById('${rowId}').remove()">Remove</button>
-            `;
-            document.getElementById('projectAssembliesList').appendChild(div);
-        }
+    if (!allPartsCache.length) await loadAllPartsCache();
+    const rowId = 'proj_asm_' + Date.now() + Math.floor(Math.random() * 1000);
+    const options = allPartsCache.map(p => `<option value="${p.id}">${p.name}${p.part ? ' — Part ' + p.part : ''}</option>`).join('');
+    const div = document.createElement('div');
+    div.id = rowId;
+    div.className = 'comp-row';
+    div.innerHTML = `
+        <select style="flex: 2;"><option value="">Select part...</option>${options}</select>
+        <input type="number" placeholder="Qty" value="1" min="1" style="flex: 1;">
+        <button type="button" onclick="document.getElementById('${rowId}').remove()">Remove</button>
+    `;
+    document.getElementById('projectAssembliesList').appendChild(div);
+}
 
         function getComponentsFromForm() {
             return Array.from(document.getElementById('componentsList').children).map(row => {
