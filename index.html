@@ -380,9 +380,9 @@
         }
 
         async function addProjectAssemblyRow() {
-            const assemblies = await getAssembliesCache();
+           if (!allPartsCache.length) await loadAllPartsCache();
             const rowId = 'proj_asm_' + Date.now() + Math.floor(Math.random() * 1000);
-            const options = assemblies.map(p => `<option value="${p.id}">${p.name}</option>`).join('');
+            const options = allPartsCache.map(p => `<option value="${p.id}">${p.name}${p.part ? ' — Part ' + p.part : ''}</option>`).join('');
             const div = document.createElement('div');
             div.id = rowId;
             div.className = 'comp-row';
